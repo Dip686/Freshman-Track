@@ -89,10 +89,10 @@ A ContractFactory in ethers.js is an abstraction used to deploy new smart contra
 so nftContract here is a factory for instances of our GameItem contract.
 */
   const nftContract = await ethers.getContractFactory("GameItem");
-
+  console.log('Contract factory connected successfully');
   // here we deploy the contract
   const deployedNFTContract = await nftContract.deploy();
-
+  console.log('Deploy in progress, it may take some time...');
   // wait for the contract to deploy
   await deployedNFTContract.deployed();
 
